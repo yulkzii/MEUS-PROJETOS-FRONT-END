@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>LOUJA</title>
+    <link rel="icon" type="image/x-icon" href="imagens/loujaicon.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #cef0bc;
+        }
+
+        .login-container {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            width: 400px;
+            /* min-height: 650px; */
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.164);
+        }
+
+        .login-container input {
+            outline: none;
+        }
+
+        .login-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            gap: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"] {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid darkolivegreen;
+            width: 85%;
+        }
+
+        h1 {
+            color: darkolivegreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: 1px solid darkolivegreen;
+            border-radius: 10px;
+            background-color: darkolivegreen;
+            color: lemonchiffon;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 90%;
+        }
+
+        input[type="submit"]:hover {
+            border: 1px solid olivedrab;
+            background-color: olivedrab;
+        }
+
+        #bancario {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            display: flex;
+            /* flex-direction: column; */
+            gap: 10px;
+            width: 90%;
+        }
+
+        #bancario.expandido {
+            max-height: 500px;
+        }
+
+        #bancario input {
+            width: 94%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid darkolivegreen;
+            margin-bottom: 10px;
+        }
+
+        .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <a href="index.html">
+            <img src="imagens/louja.png" alt="loujaicon">
+        </a>
+        <h1>Cadastro</h1>
+
+        <div class="form-wrapper">
+            <form>
+
+                <input type="text" placeholder="Nome completo" required>
+                <input type="text" placeholder="CPF" required>
+                <input type="text" placeholder="Endereço" required>
+                <input type="tel" placeholder="Telefone" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
+
+                <label
+                    style="align-self: flex-start; margin-left: 5%; color: darkolivegreen; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: small;">
+                    <input type="checkbox" id="souVendedor"> Sou vendedor
+                </label>
+
+                <div id="bancario">
+                    <input type="text" placeholder="Banco" name="banco">
+                    <input type="text" placeholder="Agência" name="agencia">
+                    <input type="text" placeholder="Conta" name="conta">
+                </div>
+
+                <input type="submit" value="CADASTRAR">
+
+            </form>
+        </div>
+    </div>
+    <script src="script_cadastro.js"></script>
+</body>
+
+</html>

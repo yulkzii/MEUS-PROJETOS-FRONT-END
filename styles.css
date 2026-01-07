@@ -1,0 +1,140 @@
+body {
+    background-color: #cef0bc;
+}
+              
+.produtos {
+    display: flex;
+    background-image: url("imagens/download.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 1px solid white;
+    gap: 10px 20px;
+    padding: 10px;
+    margin: 60px auto;
+    height: 600px;
+    max-width: 800px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.164);
+}
+
+.produto {
+    background-color: white;
+    width: 220px;
+    height: 215px;
+    overflow: hidden;
+    border: 9px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.cabecalho {
+    display: flex;
+    border-radius: 10px;
+    background-image: url("imagens/download.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    height: 80px;
+    margin: 20px auto 0;
+    width: auto;
+    border: 1px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.164);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.botao-login,
+.botao-editar {
+    background-color: white;
+    color: darkolivegreen;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.164);
+}
+
+.botao-login:hover,
+.botao-editar:hover {
+    background-color: lightgrey;
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    max-width: 90%;
+    text-align: center;
+    color: darkolivegreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fechar {
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
